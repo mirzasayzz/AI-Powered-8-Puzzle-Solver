@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>8-Puzzle Solver</h1>
+            <p>Click a tile to move it or let the AI solve it for you.</p>
+        </header>
+
+        <div class="game-controls">
+            <div class="button-group">
+                <button id="shuffle-btn">Shuffle</button>
+                <select id="algorithm-select">
+                    <option value="astar">A* Search</option>
+                    <option value="backtracking">Backtracking</option>
+                </select>
+                <button id="solve-btn">Solve</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div id="puzzle-container">
+                <div id="puzzle-grid"></div>
+            </div>
+            <div id="history-container">
+                <h3>Solver History</h3>
+                <div id="history-log"></div>
+            </div>
+        </div>
+
+        <div id="status-panel">
+            <p id="status-message">Game ready. Press Shuffle to begin.</p>
+            <div class="stats">
+                <span id="move-counter">Moves: 0</span>
+                <span id="timer">Time: 0s</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
